@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+        <link rel="stylesheet" href="Ranking.css">
+        <link rel="stylesheet" href="https://use.typekit.net/rtr7aed.css">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="switch">
+            <div class="line"></div>
+
+            <div class="rank" onclick="rankClick()">
+                <img id="rank_img" src="svg/rank_fill.svg" alt="">
+                <p>ランキング</p>
+            </div>
+
+            <div class="man" onclick="manClick()">
+                <img id="man_img" src="svg/man_frame.svg" alt="">
+                <p>会員</p>
+            </div>
+        </div>
+
+        <section id="rank_block">
+            <input id="check1" class="check_flag" type="checkbox">
+
+            <label class="rank_type" for="check1">
+                <p class="">通算スコア</p>
+                <img src="svg/under_arrow.svg" alt="">
+            </label>
+
+            <div class="ranking">
+                <a class="name_block" href="">
+                    <div class="indent"></div>
+                    <p class="rank_num">1</p>
+                    <p class="name">麻雀太郎</p>
+                    <p class="score">+130.9</p>
+                    <img class="arrow" src="svg/arrow_trans.svg" alt="">
+                </a>
+
+                <label class="close" for="check1">
+                    <img class="close_btn" src="svg/close.svg" alt="">
+                    <p>閉じる</p>
+                </label>
+            </div>
+        </section>
+
+        <section id="member_block">
+
+            <a class="name_block" href="">
+                <p class="emoji"></p>
+                <p class="name">あいう　え</p>
+                <img class="arrow" src="svg/arrow_trans.svg" alt="">
+            </a>
+
+            <a class="name_block" href="">
+                <p class="emoji"></p>
+                <p class="name">麻雀 太郎</p>
+                <img class="arrow" src="svg/arrow_trans.svg" alt="">
+            </a>
+
+            <a class="name_block" href="">
+                <p class="emoji"></p>
+                <p class="name">角田 創</p>
+                <img class="arrow" src="svg/arrow_trans.svg" alt="">
+            </a>
+            
+        </section>
+    </body>
+
+</html>
