@@ -1,25 +1,40 @@
 /* タイトル */
-/*#welcome {
-  width: auto;
-  height: auto;
-}*/
-
-#unagiWelcome {
-  background-color: #c1c10f;
+.welcome {
+  width: 100%;
+  position: absolute;
 }
 
-#botchmanWelcome {
-  background-color: #c42431;
+.bgcolor {
+  height: 680px;
 }
 
-#breakbrightblockWelcome {
-  background-color: #1466c6;
+#background {
+  width: 100%;
+  display: flex;
+}
+
+#bg-0 {
+  width: 100%;
+  /* background-color: #c1c10f; */
+  color: #c1c10f;
+  transition-duration: 10ms;
+}
+
+#bg-1 {
+  /* background-color: #c42431; */
+  color: #c42431;
+}
+
+#bg-2 {
+  /* background-color: #1466c6; */
+  color: #1466c6;
 }
 
 .jumpMenu {
   text-align: right;
   padding: 15px;
-  padding-right: 50px;
+  padding-top: 18px;
+  padding-right: 80px;
 }
 
 .welcome-jump {
@@ -29,9 +44,9 @@
 }
 
 .welcomeBox {
+  margin-top: 10px;
   display: flex;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 100px;
   padding-bottom: 120px;
 }
 
@@ -59,7 +74,7 @@
 .welcome-video {
   width: 300px;
   border-radius: 20px;
-  box-shadow: 2px 5px 15px;
+  box-shadow: 5px 5px 15px;
 }
 
 /* 共通 */
@@ -96,6 +111,7 @@
 .download-game {
   text-align: center;
   margin: auto;
+  padding: auto;
 }
 
 #download-unagiTitle {
