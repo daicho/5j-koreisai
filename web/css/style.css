@@ -5,15 +5,15 @@
 }*/
 
 #unagiWelcome {
-  background-color: burlywood;
+  background-color: #c1c10f;
 }
 
 #botchmanWelcome {
-  background-color: firebrick;
+  background-color: #c42431;
 }
 
 #breakbrightblockWelcome {
-  background-color: royalblue;
+  background-color: #1466c6;
 }
 
 .jumpMenu {
@@ -82,6 +82,8 @@
 
 #gameDownload {
   display: flex;
+  margin-top: 60px;
+  margin-bottom: 80px;
 }
 
 .download-game {
@@ -90,15 +92,15 @@
 }
 
 #download-unagiTitle {
-  color: crimson;
+  color: #c42431;
 }
 
 #download-botchmanTitle {
-  color: bisque;
+  color: #c1c10f;
 }
 
 #download-breakbrightblockTitle {
-  color: aqua;
+  color: #1466c6;
 }
 
 .download-gameExplain {
