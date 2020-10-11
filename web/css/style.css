@@ -1,0 +1,122 @@
+/* タイトル */
+/*#welcome {
+  width: auto;
+  height: auto;
+}*/
+
+#unagiWelcome {
+  background-color: burlywood;
+}
+
+#botchmanWelcome {
+  background-color: firebrick;
+}
+
+#breakbrightblockWelcome {
+  background-color: royalblue;
+}
+
+.jumpMenu {
+  text-align: right;
+  padding: 15px;
+  padding-right: 50px;
+}
+
+.welcome-jump {
+  color: white;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.welcomeBox {
+  display: flex;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 80px;
+}
+
+.welcomeBox-left {
+  margin-top: 0px;
+}
+
+.welcome-title {
+  background-color: white;
+  font-size: 80px;
+}
+
+.welcome-explain {
+  color: white;
+  padding-top: 50px;
+  width: 560px;
+  line-height: 2em;
+}
+
+.welcomeBox-right {
+  text-align: right;
+}
+
+/* 共通 */
+
+.smallTitle {
+  font-size: 25px;
+}
+
+/* ランキング */
+
+#ranking {
+  background-color: white;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+/* ダウンロード */
+#download {
+  background-color: white;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.help {
+  color: gray;
+}
+
+#gameDownload {
+  display: flex;
+}
+
+.download-game {
+  text-align: center;
+  margin: auto;
+}
+
+#download-unagiTitle {
+  color: crimson;
+}
+
+#download-botchmanTitle {
+  color: bisque;
+}
+
+#download-breakbrightblockTitle {
+  color: aqua;
+}
+
+.download-gameExplain {
+  width: 230px;
+  text-align: left;
+}
+
+/* プレビュー */
+
+#preview {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.previewBox {
+  display: flex;
+}
+
+.preview-game {
+  margin: auto;
+}

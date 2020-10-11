@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>5Jのレトロゲーム</title>
+  </head>
+  <body>
+    <!-- トップの画面 -->
+    <div class="welcome" id="unagiWelcome">
+      <div class="jumpMenu">
+        <button class="welcome-jump">ランキング</button>
+        <button class="welcome-jump">ゲームをダウンロードする</button>
+        <button class="welcome-jump">プレビュー</button>
+      </div>
+      <div class="welcomeBox">
+        <div class="welcomeBox-left">
+          <!-- 本ソースコードのクソポイント1 -->
+          <span class="welcome-title">ようこそ、</span>
+          <div></div>
+          <span class="welcome-title">レトロゲームの</span>
+          <div></div>
+          <span class="welcome-title">世界へ。</span>
+          <div></div>
+
+          <div class="welcome-explain">
+            長野工業高等専門学校、電子情報工学科の5学年は昨年、レトロゲームを作りました。今年、オンラインで競い会えるようになって帰ってきました。ゲームをダウンロードして存分に楽しんでください。
+          </div>
+        </div>
+        <div class="welcomeBox-right">
+          <img
+            class="welcome-video"
+            src="./images/image.png"
+            alt="ゲームムービー"
+          />
+        </div>
+      </div>
+    </div>
+    <div>
+      <img class="giza1" src="./images/unagi-giza.png" alt="ギザ" />
+    </div>
+    <!-- ランキングの画面 -->
+    <div id="ranking">
+      <div class="smallTitle">ランキングを見る</div>
+      <div>ランキング</div>
+    </div>
+    <!-- ダウンロードの画面 -->
+    <div id="download">
+      <div class="smallTitle">ゲームをダウンロードする</div>
+      <div class="help">ダウンロードの仕方を知る</div>
+      <div id="gameDownload">
+        <div class="download-game">
+          <div id="download-unagiTitle">UNAGI</div>
+          <div class="download-gameExplain">
+            壁や障害物をよけつつ、餌を食べさせてうなぎを成長させましょう。成長するほどウナギが伸び難易度が上がります。
+          </div>
+          <button class="download-button">ダウンロード</button>
+        </div>
+        <div class="download-game">
+          <div id="download-botchmanTitle">BOTCH-MAN</div>
+          <div class="download-gameExplain">
+            高専の教員に捕まらず、ステージ上に散らばる単位を全てゲットしましょう。アイテムを取るといいことがあるかも...?
+          </div>
+          <button class="download-button">ダウンロード</button>
+        </div>
+        <div class="download-game">
+          <div id="download-breakbrightblockTitle">BREAK BRIGHT BLOCK</div>
+          <div class="download-gameExplain">
+            制限時間内にどれだけ多く華麗にブロックを消せるかを競うパズルゲームです。特殊な消し方で得点アップ!
+          </div>
+          <button class="download-button">ダウンロード</button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <img src="./images/giza2." alt="ギザ" />
+    </div>
+    <!-- プレビュー -->
+    <div id="preview">
+      <div class="smallTitle">プレビュー</div>
+      <div class="previewBox">
+        <div class="preview-game">
+          <img src="./images/preview-unagi.png" alt="ウナギプレビュー" />
+        </div>
+        <div class="preview-game">
+          <img src="./images/preview-botchman.png" alt="ボッチマンプレビュー" />
+        </div>
+        <div class="preview-game">
+          <img
+            src="./images/preview-breakbrightblock.png"
+            alt="ブレイクブライトブロックプレビュー"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
