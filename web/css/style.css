@@ -32,7 +32,7 @@
   display: flex;
   padding-left: 80px;
   padding-right: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 120px;
 }
 
 .welcomeBox-left {
@@ -53,6 +53,13 @@
 
 .welcomeBox-right {
   text-align: right;
+  margin: auto;
+}
+
+.welcome-video {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 2px 5px 15px;
 }
 
 /* 共通 */
