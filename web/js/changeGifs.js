@@ -1,6 +1,17 @@
 // アニメーションの細かさ
 var count2resize = 1000;
 
+var swiper = new Swiper(".swiper-container", {
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
+  },
+  autoplay: {
+    delay: 5000,
+  },
+  loop: true,
+});
+
 var gifs_src = new Array(
   "./images/unagi.gif",
   "./images/pacman.gif",
@@ -22,9 +33,9 @@ const slideshow_timer = () => {
     num += 1;
   }
   screen.src = gifs_src[num];
-  bg0.style.backgroundColor = colors_bg[0];
-  bg1.style.backgroundColor = colors_bg[1];
-  bg2.style.backgroundColor = colors_bg[2];
+  // bg0.style.backgroundColor = colors_bg[0];
+  // bg1.style.backgroundColor = colors_bg[1];
+  // bg2.style.backgroundColor = colors_bg[2];
 
   animation(count2resize);
 };
@@ -34,13 +45,13 @@ const animation = (count) => {
     slideshow_timer();
     return;
   }
-  bg0.style.width = 100.0 - sizePerCount * count + "%";
-  bg1.style.width = 0.0 + sizePerCount * count + "%";
-  bg2.style.width = 0.0 + 0 + "%";
+  bg0.style.width = 100.0 + "%"; //- sizePerCount * count + "%";
+  // bg1.style.width = 0.0 + sizePerCount * count + "%";
+  // bg2.style.width = 0.0 + 0 + "%";
 
   console.log(count);
 
-  setTimeout("animation(" + (count - 1) + ")", 0.1);
+  // setTimeout("animation(" + (count - 1) + ")", 0.1);
 };
 
 slideshow_timer();

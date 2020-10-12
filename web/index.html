@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./library/swiper-5.4.5/swiper.min.css" />
     <title>5Jのレトロゲーム</title>
   </head>
   <body>
     <!-- トップの画面 -->
-    <div class="welcome" id="unagiWelcome">
+    <div class="welcome" id="unagiWelcome" style="z-index: 2">
       <div class="jumpMenu">
         <button class="welcome-jump">ランキング</button>
         <button class="welcome-jump">ゲームをダウンロードする</button>
@@ -30,85 +31,51 @@
         <div class="welcomeBox-right">
           <img
             class="welcome-video"
-            id="gamemovie"
             src="./images/unagi.gif"
             alt="ゲームムービー"
           />
         </div>
       </div>
     </div>
-    <div id="background">
-      <div class="bgcolor" id="bg-0">unagi</div>
-      <div class="bgcolor" id="bg-1">botch</div>
-      <div class="bgcolor" id="bg-2">block</div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" id="bg-0">
+          <div class="movieBox-left">a</div>
+          <div class="movieBox-right">
+            <img
+              class="welcome-video"
+              src="./images/unagi.gif"
+              alt="ゲームムービー"
+            />
+          </div>
+        </div>
+        <div class="swiper-slide" id="bg-1">
+          <div class="movieBox-left">a</div>
+          <div class="movieBox-right">
+            <img
+              class="welcome-video"
+              src="./images/pacman.gif"
+              alt="ゲームムービー"
+            />
+          </div>
+        </div>
+        <div class="swiper-slide" id="bg-2">
+          <div class="movieBox-left">a</div>
+          <div class="movieBox-right">
+            <img
+              class="welcome-video"
+              src="./images/bbb.gif"
+              alt="ゲームムービー"
+            />
+          </div>
+        </div>
+        <!-- <div class="swiper-slide" id="bg-1">botch</div> -->
+      </div>
+      <div class="swiper-pagination"></div>
     </div>
     <div>
       <img class="giza1" src="./images/unagi-giza.png" alt="ギザ" />
     </div>
-    <!-- パックマン 
-      <div class="jumpMenu">
-        <button class="welcome-jump">ランキング</button>
-        <button class="welcome-jump">ゲームをダウンロードする</button>
-        <button class="welcome-jump">プレビュー</button>
-      </div>
-      <div class="welcomeBox">
-        <div class="welcomeBox-left">
-          <!-- 本ソースコードのクソポイント1 
-          <span class="welcome-title">ようこそ、</span>
-          <div></div>
-          <span class="welcome-title">レトロゲームの</span>
-          <div></div>
-          <span class="welcome-title">世界へ。</span>
-          <div></div>
-          <div class="welcome-explain">
-            長野工業高等専門学校、電子情報工学科の5学年は昨年、レトロゲームを作りました。今年、オンラインで競い会えるようになって帰ってきました。ゲームをダウンロードして存分に楽しんでください。
-          </div>
-        </div>
-        <div class="welcomeBox-right">
-          <img
-            class="welcome-video"
-            id="gamemovie"
-            src="./images/pacman.gif"
-            alt="ゲームムービー"
-          />
-        </div>
-      </div>
-    </div>
-    <div>
-      <img class="giza1" src="./images/pacman-giza.png" alt="ギザ" />
-    </div>
-    <!-- bbb 
-    <div class="jumpMenu">
-      <button class="welcome-jump">ランキング</button>
-      <button class="welcome-jump">ゲームをダウンロードする</button>
-      <button class="welcome-jump">プレビュー</button>
-    </div>
-    <div class="welcomeBox">
-      <div class="welcomeBox-left">
-        <!-- 本ソースコードのクソポイント1 
-        <span class="welcome-title">ようこそ、</span>
-        <div></div>
-        <span class="welcome-title">レトロゲームの</span>
-        <div></div>
-        <span class="welcome-title">世界へ。</span>
-        <div></div>
-        <div class="welcome-explain">
-          長野工業高等専門学校、電子情報工学科の5学年は昨年、レトロゲームを作りました。今年、オンラインで競い会えるようになって帰ってきました。ゲームをダウンロードして存分に楽しんでください。
-        </div>
-      </div>
-      <div class="welcomeBox-right">
-        <img
-          class="welcome-video"
-          id="gamemovie"
-          src="./images/bbb.gif"
-          alt="ゲームムービー"
-        />
-      </div>
-    </div>
-  </div>
-  <div>
-    <img class="giza1" src="./images/bbb-giza.png" alt="ギザ" />
-  </div> -->
     <!-- ランキングの画面 -->
     <div id="ranking">
       <div class="smallTitle">ランキングを見る</div>
@@ -167,6 +134,8 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="./js/changeGifs.js"></script>
+
+    <script src="./library/swiper-5.4.5/swiper.min.js"></script>
+    <script src="./js/changeGifs.js"></script>
   </body>
 </html>
