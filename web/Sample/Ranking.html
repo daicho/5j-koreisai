@@ -5,25 +5,22 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
         <link rel="stylesheet" href="Ranking.css">
+
+        <!-- フォントの読み込み -->
         <link rel="stylesheet" href="https://use.typekit.net/rtr7aed.css">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        <div class="switch">
-            <div class="line"></div>
-
-            <div class="rank" onclick="rankClick()">
-                <img id="rank_img" src="svg/rank_fill.svg" alt="">
-                <p>ランキング</p>
-            </div>
-
-            <div class="man" onclick="manClick()">
-                <img id="man_img" src="svg/man_frame.svg" alt="">
-                <p>会員</p>
-            </div>
+        <h1>ランキングを見る</h1>
+        <!-- ランキングの切り替え -->
+        <div class="switch-menu">
+            <p id="unagi"onclick="unagi_Click()" >UNAGI</p>
+            <p id="botch-man" onclick="botchman_Click()">BOTCH-MAN</p>
+            <p id="bbb" onclick="bbb_Click()">BREAK BRIGHT BLOCK</p>
         </div>
 
+        <!-- ランキングの表示 -->
         <section id="rank_block">
             <input id="check1" class="check_flag" type="checkbox">
 
