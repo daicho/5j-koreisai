@@ -16,18 +16,18 @@
 #bg-0 {
   width: 100%;
   /* background-color: #c1c10f; */
-  color: #c1c10f;
-  transition-duration: 10ms;
+  color: rgba(0, 0, 0, 0);
+  /* transition-duration: 10ms; */
 }
 
 #bg-1 {
   /* background-color: #c42431; */
-  color: #c42431;
+  color: rgba(0, 0, 0, 0);
 }
 
 #bg-2 {
   /* background-color: #1466c6; */
-  color: #1466c6;
+  color: rgba(0, 0, 0, 0);
 }
 
 .jumpMenu {
