@@ -1,27 +1,32 @@
 /*-------------------切り替えボタンの装飾---------------*/
-.switch
+h1, p{
+    font-family: 'Noto Sans JP', sans-serif;
+    /* 使うweightは700か400のみ */
+    font-weight: 700;
+}
+
+h1
 {
-    width: 205px;
+    font-size: 30px;
+}
+
+.switch_menu
+{
+    display: flex;
+
+    width: 1000px;
     height: 60px;
     margin: 0 auto;
     margin-bottom: 20px;
-    position: relative;
+
+    background-color: red;
 }  
 
-.switch div
+.switch_menu p
 {
-    display: inline-block;
-    text-align: center;
-    color: #111926;
-}
-
-.switch div img
-{
-    
-    height: 35px;
-    width: auto;
-
-    margin: 0 auto;
+    display: block;
+    padding: 0, 50px, 0 50px;
+    background-color: yellow;
 }
 
 .rank
@@ -40,21 +45,6 @@
 {
     font-size: 14px;
     margin: 0;
-}
-
-.line
-{
-    width: 3px;
-    height: 100%;
-    margin: 0 auto;
-    background-color: #111926;
-    border-radius: 2px;
-
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 20px;
-    position: absolute;
 }
 
 /*-------------------ランキングの装飾---------------*/
