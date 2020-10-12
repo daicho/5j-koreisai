@@ -1,40 +1,56 @@
+html {
+  height: 100%;
+}
+body {
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  box-sizing: border-box;
+}
 /* タイトル */
 .welcome {
   width: 100%;
-  position: absolute;
-}
-
-.bgcolor {
   height: 100%;
+  position: absolute;
+  z-index: 2;
 }
 
 .swiper-container {
   width: 100%;
-  height: 960px;
+  height: 100%;
   z-index: 1;
+}
+
+.swiper-wapper {
+  width: 100%;
+  height: 100%;
 }
 
 .swiper-slide {
   width: 100%;
+  height: 100%;
 }
 
 #bg-0 {
   width: 100%;
-  height: 690px;
+  height: 100%;
   background-color: #c1c10f;
   color: rgba(0, 0, 0, 0);
 }
 
 #bg-1 {
   width: 100%;
-  height: 690px;
+  height: 100%;
   background-color: #c42431;
   color: rgba(0, 0, 0, 0);
 }
 
 #bg-2 {
   width: 100%;
-  height: 690px;
+  height: 100%;
   background-color: #1466c6;
   color: rgba(0, 0, 0, 0);
 }
@@ -100,7 +116,7 @@
   box-shadow: 5px 5px 15px rgba(10, 10, 30, 0.4);
 }
 
-.gizagiza {
+#gizagiza {
   text-align: right;
 }
 
@@ -116,6 +132,7 @@
   background-color: white;
   padding-left: 80px;
   padding-right: 80px;
+  height: 100%;
 }
 
 /* ダウンロード */
