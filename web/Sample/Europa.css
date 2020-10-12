@@ -1,3 +1,17 @@
+
+body
+{
+    position: absolute;
+
+    margin: 0;
+    width: 100%;
+    overflow: auto;
+
+    box-sizing: border-box;
+
+    background-color: #c1c10f;
+}
+
 p{
     font-family: europa, sans-serif;
     font-weight: 700;
