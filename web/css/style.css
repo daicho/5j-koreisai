@@ -1,3 +1,19 @@
+/* fontの設定 */
+/* noto sansの場合
+p{
+  font-family: 'Noto Sans JP', sans-serif;
+  使うweightは700か400のみ
+  font-weight: 700;
+}
+
+Europaの場合
+p{
+  font-family: europa, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+} */
+
+
 html {
   height: 100%;
 }
