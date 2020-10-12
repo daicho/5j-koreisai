@@ -7,9 +7,10 @@ var swiper = new Swiper(".swiper-container", {
     dynamicBullets: true,
   },
   autoplay: {
-    delay: 5000,
+    delay: 4000,
   },
   loop: true,
+  speed: 1000,
 });
 
 var gifs_src = new Array(
