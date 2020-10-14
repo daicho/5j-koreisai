@@ -11,7 +11,17 @@ var swiper = new Swiper(".swiper-container", {
   },
   loop: true,
   speed: 1000,
+  simulateTouch: false,
 });
+
+document.onselectstart = function () {
+  return false;
+};
+document.onmousedown = function () {
+  return false;
+};
+document.body.onselectstart = "return false;";
+document.body.onmousedown = "return false;";
 
 var gifs_src = new Array(
   "./images/unagi.gif",
