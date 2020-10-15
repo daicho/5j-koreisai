@@ -1,4 +1,4 @@
-var swiper = new Swiper(".bgcolor", {
+var swiper = new Swiper(".swiper-container", {
   pagination: {
     el: ".swiper-pagination",
     dynamicBullets: true,
@@ -10,18 +10,30 @@ var swiper = new Swiper(".bgcolor", {
   speed: 1000,
   simulateTouch: false,
 });
-var swiper = new Swiper(".gizasvg", {
-  pagination: {
-    el: ".swiper-pagination",
-    dynamicBullets: true,
-  },
-  autoplay: {
-    delay: 4000,
-  },
-  loop: true,
-  speed: 1000,
-  simulateTouch: false,
-});
+// var swiper = new Swiper(".bgcolor", {
+//   pagination: {
+//     el: ".swiper-pagination",
+//     dynamicBullets: true,
+//   },
+//   autoplay: {
+//     delay: 3998,
+//   },
+//   loop: true,
+//   speed: 1000,
+//   simulateTouch: false,
+// });
+// var swiper = new Swiper(".gizasvg", {
+//   pagination: {
+//     el: ".swiper-pagination",
+//     dynamicBullets: true,
+//   },
+//   autoplay: {
+//     delay: 3993,
+//   },
+//   loop: true,
+//   speed: 1000,
+//   simulateTouch: false,
+// });
 
 document.onselectstart = function () {
   return false;
