@@ -133,13 +133,43 @@
           <div class="point">2000</div>
           <div class="date">2020/10/10</div>
         </div>
+<div class="score">
+          <div class="num">2</div>
+          <div class="name">うんこちんちん</div>
+          <div class="point">2000</div>
+          <div class="date">2020/10/10</div>
+        </div>
+<div class="score">
+          <div class="num">2</div>
+          <div class="name">うんこちんちん</div>
+          <div class="point">2000</div>
+          <div class="date">2020/10/10</div>
+        </div>
+<div class="score">
+          <div class="num">2</div>
+          <div class="name">うんこちんちん</div>
+          <div class="point">2000</div>
+          <div class="date">2020/10/10</div>
+        </div>
+<div class="score">
+          <div class="num">2</div>
+          <div class="name">うんこちんちん</div>
+          <div class="point">2000</div>
+          <div class="date">2020/10/10</div>
+        </div>
+<div class="score">
+          <div class="num">2</div>
+          <div class="name">うんこちんちん</div>
+          <div class="point">2000</div>
+          <div class="date">2020/10/10</div>
+        </div>
       </div>
     </div>
 
     <!-- ダウンロードの画面 -->
     <div id="download">
       <div class="smallTitle">ゲームをダウンロードする</div>
-      <div class="help" onclick="openHelp()">
+      <label for="trigger" class="help" >
         <img
           class="helpMark"
           src="./images/question.svg"
@@ -147,6 +177,54 @@
         />
         <div class="helpName">ダウンロードの仕方を知る</div>
       </div>
+      <!-- ヘルプのポップアップ -->
+      <div class="popup_wrap">
+        <input id="trigger" type="checkbox" />
+        <div class="popup_overlay">
+          <label for="trigger" class="popup_trigger"></label>
+          <div class="popup_content">
+            <div id="popupTop">
+              <div class="popupTitle">ゲームをダウンロードする</div>
+              <label for="trigger" class="close_btn">
+                <img src="./images/close-btn.svg" alt="閉じるボタン">
+              </label>
+            </div>
+            <div id="popupBottom">
+              <div class="setpBox">
+                <div class="stepNum">STEP1</div>
+                <img class="stepImg" src="./images/dl_1.png" alt="ステップ1">
+                <div class="stepTitle">ダウンロードする</div>
+                <div class="stepExp">
+                  ホームページからお好きなゲームを選んで、ダウンロードボタンをクリックします。
+                </div>
+              </div>
+              <div>
+                <img class="arrowImg" src="./images/arrow.svg" alt="右">
+              </div>
+              <div class="setpBox">
+                <div class="stepNum">STEP2</div>
+                <img class="stepImg" src="./images/dl_2.png" alt="ステップ1">
+                <div class="stepTitle">解凍する</div>
+                <div class="stepExp">
+                  ダウンロードしたファイルを右クリックから解凍し、フォルダを開きます。
+                </div>
+              </div>
+              <div>
+                <img class="arrowImg" src="./images/arrow.svg" alt="右">
+              </div>
+              <div class="setpBox">
+                <div class="stepNum">STEP3</div>
+                <img class="stepImg" src="./images/dl_3.png" alt="ステップ1">
+                <div class="stepTitle">.exeファイルをクリック</div>
+                <div class="stepExp">
+                  〇〇.exeファイルをクリックするとゲームで遊べます。必ず「README.txt」を読んでから遊んでください。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ここまで -->
       <div id="gameDownload">
         <div class="download-game">
           <div class="download-gameTitle" id="download-unagiTitle">UNAGI</div>

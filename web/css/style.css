@@ -80,8 +80,12 @@ body {
   font-weight: 700;
   border: none;
   background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
 
-  padding-left: 42px;
+  width: auto;
+  height: 26px;
+  margin-top: 30px;
+  margin-left: 42px;
 }
 
 .welcomeBox {
@@ -191,6 +195,7 @@ body {
 }
 
 .help {
+  cursor: pointer;
   font-size: 20px;
   font-weight: 700;
 
@@ -204,6 +209,12 @@ body {
 }
 .helpName {
   color: #aaaaaa;
+}
+#helpPopup {
+  width: 40%;
+  background-color: #e8e5db;
+  display: none;
+  position: fixed;
 }
 
 #gameDownload {
@@ -244,6 +255,7 @@ body {
 }
 
 .download-button {
+  cursor: pointer;
   background-color: black;
   color: white;
   border: none;
@@ -313,6 +325,7 @@ h1 {
 }
 
 .switch-unselected {
+  cursor: pointer;
   font-size: 22px;
   font-weight: 700;
   color: black;
@@ -329,6 +342,7 @@ h1 {
 }
 
 .selected-unagi {
+  cursor: pointer;
   font-size: 22px;
   font-weight: 700;
   color: white;
@@ -344,6 +358,7 @@ h1 {
   height: 100%;
 }
 .selected-botch {
+  cursor: pointer;
   font-size: 22px;
   font-weight: 700;
   color: white;
@@ -359,6 +374,7 @@ h1 {
   height: 100%;
 }
 .selected-bbb {
+  cursor: pointer;
   font-size: 22px;
   font-weight: 700;
   color: white;
@@ -655,3 +671,129 @@ h1 {
   width: 15px;
   height: auto;
 } */
+
+/*ポップアップここから*/
+.popup_wrap input {
+  display: none;
+}
+
+.popup_overlay {
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.5s, transform 0s 0.5s;
+  transform: scale(0);
+}
+
+.popup_trigger {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.popup_content {
+  position: relative;
+  align-self: center;
+  width: 90%;
+  max-width: 1070px;
+  padding: 35px 45px 45px 45px;
+  box-sizing: border-box;
+  background: #f4f4f4;
+  line-height: 1.4em;
+  transition: 0.5s;
+  border-radius: 30px;
+}
+
+.close_btn {
+  position: absolute;
+  top: 31px;
+  right: 45px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.popup_wrap input:checked ~ .popup_overlay {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.5s;
+}
+
+.open_btn {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 30px;
+  margin: 10px auto;
+  padding: 8px 16px;
+  color: #fff;
+  background: #0c0d62;
+  font-weight: bold;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.popupTitle {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+#popupBottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stepBox {
+  width: 280px;
+}
+
+.stepNum {
+  color: #696969;
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 45px;
+}
+
+.stepImg {
+  width: 280px;
+  height: 225px;
+  border-radius: 30px;
+  margin-top: 14px;
+}
+
+.stepTitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 auto;
+
+  width: 176px;
+  height: 32px;
+  margin-top: 20px;
+}
+
+.stepExp {
+  width: 280px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+.arrowImg {
+  padding-top: 180px;
+}
+/*ポップアップココまで*/
