@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="./css/Ranking.css" /> -->
     <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="stylesheet"
@@ -30,7 +31,7 @@
           <img src="./images/catch-copy.svg" alt="キャッチコピー" />
         </div>
         <div class="welcome-explain">
-          れ長野工業高等専門学校、電子情報工学科の5学年は昨年、レトロゲームを作りました。今年、オンラインで競い会えるようになって帰ってきました。ゲームをダウンロードして存分に楽しんでください。
+          長野工業高等専門学校、電子情報工学科の5学年は昨年、レトロゲームを作りました。今年、オンラインで競い会えるようになって帰ってきました。ゲームをダウンロードして存分に楽しんでください。
         </div>
       </div>
     </div>
@@ -98,7 +99,42 @@
     <div id="ranking">
       <div class="smallTitle">ランキングを見る</div>
       <div>ランキング</div>
+      <!-- ランキングの切り替え -->
+      <div class="switch_menu">
+        <div class="selected-unagi" id="unagi" onclick="unagi_Click()">
+          UNAGI
+        </div>
+        <div
+          class="switch-unselected"
+          id="botch-man"
+          onclick="botchman_Click()"
+        >
+          BOTCH-MAN
+        </div>
+        <div class="switch-unselected" id="bbb" onclick="bbb_Click()">
+          BREAK BRIGHT BLOCK
+        </div>
+      </div>
+
+      <!-- ランキングの表示 -->
+      <div class="rankingBox">
+        <!-- 実際の中身スコア一つ分 -->
+        <div class="topScore">
+          <div class="topNum">1</div>
+          <img class="topCrown" src="./images/crown.svg" alt="王冠" />
+          <div class="topName">うんこちんちん</div>
+          <div class="topPoint">999999</div>
+          <div class="topDate">2020/10/10</div>
+        </div>
+        <div class="score">
+          <div class="num">2</div>
+          <div class="name">うんこちんちん</div>
+          <div class="point">2000</div>
+          <div class="date">2020/10/10</div>
+        </div>
+      </div>
     </div>
+
     <!-- ダウンロードの画面 -->
     <div id="download">
       <div class="smallTitle">ゲームをダウンロードする</div>
@@ -135,12 +171,10 @@
       <img src="./images/preview-block.svg" alt="ギザ" />
     </div>
     <!-- プレビュー -->
+
     <div id="preview">
       <div class="smallTitle">プレビュー</div>
       <div class="previewBox">
-        <!-- <div class="preview-game">aaaaaa</div>
-        <div class="preview-game">bbbbbb</div>
-        <div class="preview-game">cccccc</div> -->
         <img
           src="./images/unagi.gif"
           class="preview-game"
