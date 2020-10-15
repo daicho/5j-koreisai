@@ -22,9 +22,15 @@
     <!-- トップの画面 -->
     <div class="welcome" id="unagiWelcome">
       <div class="jumpMenu">
-        <button class="welcome-jump">ランキング</button>
-        <button class="welcome-jump">ゲームをダウンロードする</button>
-        <button class="welcome-jump">プレビュー</button>
+        <button class="welcome-jump" onclick="jump2ranking()">
+          ランキング
+        </button>
+        <button class="welcome-jump" onclick="jump2download()">
+          ゲームをダウンロードする
+        </button>
+        <button class="welcome-jump" onclick="jump2preview()">
+          プレビュー
+        </button>
       </div>
       <div class="welcomeBox">
         <div class="welcome-title">
@@ -35,6 +41,7 @@
         </div>
       </div>
     </div>
+
     <div class="swiper-container bgcolor">
       <div class="swiper-wrapper">
         <div class="swiper-slide" id="bg-0">
@@ -81,14 +88,14 @@
         </div>
         <div class="swiper-slide">
           <img
-            src="./images/slide-block.svg"
+            src="./images/red-block.svg"
             alt="ギザギザ"
             class="donotDownload"
           />
         </div>
         <div class="swiper-slide">
           <img
-            src="./images/slide-block.svg"
+            src="./images/blue-block.svg"
             alt="ギザギザ"
             class="donotDownload"
           />
@@ -98,20 +105,13 @@
     <!-- ランキングの画面 -->
     <div id="ranking">
       <div class="smallTitle">ランキングを見る</div>
-      <div>ランキング</div>
       <!-- ランキングの切り替え -->
       <div class="switch_menu">
-        <div class="selected-unagi" id="unagi" onclick="unagi_Click()">
-          UNAGI
-        </div>
-        <div
-          class="switch-unselected"
-          id="botch-man"
-          onclick="botchman_Click()"
-        >
+        <div class="selected-unagi" id="unagi" onclick="showUnagi()">UNAGI</div>
+        <div class="switch-unselected" id="botch-man" onclick="showBotch()">
           BOTCH-MAN
         </div>
-        <div class="switch-unselected" id="bbb" onclick="bbb_Click()">
+        <div class="switch-unselected" id="bbb" onclick="showBBB()">
           BREAK BRIGHT BLOCK
         </div>
       </div>
@@ -138,14 +138,23 @@
     <!-- ダウンロードの画面 -->
     <div id="download">
       <div class="smallTitle">ゲームをダウンロードする</div>
-      <div class="help">ダウンロードの仕方を知る</div>
+      <div class="help" onclick="openHelp()">
+        <img
+          class="helpMark"
+          src="./images/question.svg"
+          alt="クエスチョンマーク"
+        />
+        <div class="helpName">ダウンロードの仕方を知る</div>
+      </div>
       <div id="gameDownload">
         <div class="download-game">
           <div class="download-gameTitle" id="download-unagiTitle">UNAGI</div>
           <div class="download-gameExplain">
             壁や障害物をよけつつ、餌を食べさせてうなぎを成長させましょう。成長するほどウナギが伸び難易度が上がります。
           </div>
-          <button class="download-button">ダウンロード</button>
+          <button class="download-button" onclick="donwloadUnagi()">
+            ダウンロード
+          </button>
         </div>
         <div class="download-game">
           <div class="download-gameTitle" id="download-botchmanTitle">
@@ -154,7 +163,9 @@
           <div class="download-gameExplain">
             高専の教員に捕まらず、ステージ上に散らばる単位を全てゲットしましょう。アイテムを取るといいことがあるかも...?
           </div>
-          <button class="download-button">ダウンロード</button>
+          <button class="download-button" onclick="donwloadBotch()">
+            ダウンロード
+          </button>
         </div>
         <div class="download-game">
           <div class="download-gameTitle" id="download-breakbrightblockTitle">
@@ -163,7 +174,9 @@
           <div class="download-gameExplain">
             制限時間内にどれだけ多く華麗にブロックを消せるかを競うパズルゲームです。特殊な消し方で得点アップ!
           </div>
-          <button class="download-button">ダウンロード</button>
+          <button class="download-button" onclick="donwloadBBB()">
+            ダウンロード
+          </button>
         </div>
       </div>
     </div>
@@ -197,5 +210,9 @@
 
     <script src="./library/swiper-6.3.3/swiper-bundle.min.js"></script>
     <script src="./js/changeGifs.js"></script>
+    <script src="./js/ranking.js"></script>
+    <script src="./js/help.js"></script>
+    <script src="./js/jump.js"></script>
+    <script src="./js/download.js"></script>
   </body>
 </html>
