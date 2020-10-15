@@ -16,7 +16,7 @@ html {
   height: 100%;
 }
 body {
-  position: absolute;
+  /* position: absolute; */
   margin: 0;
   width: 100%;
   height: 100%;
@@ -157,6 +157,7 @@ body {
 
 .help {
   color: gray;
+  margin-bottom: 70px;
 }
 
 #gameDownload {
@@ -184,39 +185,61 @@ body {
 }
 
 .download-gameTitle {
-  font-size: 20px;
+  font-size: 22px;
+  margin-bottom: 13px;
 }
 
 .download-gameExplain {
   width: 230px;
   text-align: left;
   margin: auto;
-  margin-top: 10px;
+  font-weight: 400;
+  margin-bottom: 19px;
 }
 
 .download-button {
   background-color: black;
   color: white;
   border: none;
-  border-radius: 30px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 20px;
-  padding-left: 20px;
-  margin-top: 20px;
+  border-radius: 22px;
+  width: 159px;
+  height: 43px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 /* プレビュー */
 
+#previewsvg {
+  height: 245px;
+}
+
 #preview {
-  padding-left: 80px;
-  padding-right: 80px;
+  /* width: 100%; */
+  padding-left: 8.2%;
+  padding-right: 8.2%;
+  background-color: #e8e5db;
 }
 
 .previewBox {
-  display: flex;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  margin-top: 52px;
+  margin-bottom: 223px;
 }
 
 .preview-game {
-  margin: auto;
+  width: 243px;
+  border-radius: 22px;
+  box-shadow: 5px 5px 15px rgba(10, 10, 30, 0.4);
+}
+
+.copyright {
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  padding-bottom: 42px;
+  background-color: #e8e5db;
+  color: #7b7b7b;
 }
