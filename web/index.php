@@ -52,7 +52,6 @@ for ($i = 0; $i < 3; $i++) {
     </script>
   </head>
   <body>
-  	<a href="#ranking" onClick="ga('send', 'event', [pdf], [download], [ファイル名], [1]);">あああ</a>
     <!-- トップの画面 -->
     <div class="welcome" id="unagiWelcome">
       <div class="jumpMenu">
