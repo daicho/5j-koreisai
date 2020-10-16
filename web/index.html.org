@@ -44,58 +44,62 @@
 
     <div class="swiper-container bgcolor">
       <div class="swiper-wrapper">
-
-        <!-- 一つ目 -->
-        <div class="swiper-slide">
-          <div id="bg-1">
-            <div class="movieBox">
-              <img
+        <div class="swiper-slide" id="bg-1">
+          <div class="movieBox">
+            <img
               class="welcome-video"
               src="./images/unagi.gif"
               alt="ウナギムービー"
-              />
-              <div class="gameTitle">UNAGI</div>
-            </div>
-          </div>
-          <div class="gameGiza">
-            <img  src="./images/red-block.svg" alt="うなギザギザ" style="background-color: white; z-index: 5;">
+            />
+            <div class="gameTitle">UNAGI</div>
           </div>
         </div>
-        
-        <!-- 二つ目 -->
-        <div class="swiper-slide">
-          <div id="bg-0">
-            <div class="movieBox">
-              <img
+        <div class="swiper-slide" id="bg-0">
+          <div class="movieBox">
+            <img
               class="welcome-video"
               src="./images/botchman.gif"
               alt="ウナギムービー"
-              />
-              <div class="gameTitle">BOTCH-MAN</div>
-            </div>
-          </div>
-          <div class="gameGiza">
-            <img  src="./images/slide-block.svg" alt="うなギザギザ" style="background-color: white; z-index: 5;">
+            />
+            <div class="gameTitle">BOTCH-MAN</div>
           </div>
         </div>
-
-        <!-- 三つ目 -->
-        <div class="swiper-slide">
-          <div id="bg-2">
-            <div class="movieBox">
-              <img
+        <div class="swiper-slide" id="bg-2">
+          <div class="movieBox">
+            <img
               class="welcome-video"
               src="./images/bbb.gif"
               alt="ブレイクブライトブロックムービー"
-              />
-              <div class="gameTitle">BREAK BRIGHT BLOCK</div>
-            </div>
-          </div>
-          <div class="gameGiza">
-            <img  src="./images/blue-block.svg" alt="うなギザギザ" style="background-color: white; z-index: 5;">
+            />
+            <div class="gameTitle">BREAK BRIGHT BLOCK</div>
           </div>
         </div>
-
+        <!-- <div class="swiper-slide" id="bg-1">botch</div> -->
+      </div>
+    </div>
+    <div class="swiper-container gizasvg" id="gizagiza">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            src="./images/red-block.svg"
+            alt="ギザギザ"
+            class="gameGiza"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="./images/slide-block.svg"
+            alt="ギザギザ"
+            class="gameGiza"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="./images/blue-block.svg"
+            alt="ギザギザ"
+            class="gameGiza"
+          />
+        </div>
       </div>
     </div>
     <!-- ランキングの画面 -->
