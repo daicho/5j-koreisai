@@ -40,8 +40,19 @@ for ($i = 0; $i < 3; $i++) {
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180728016-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-180728016-1');
+    </script>
   </head>
   <body>
+  	<a href="#ranking" onClick="ga('send', 'event', [pdf], [download], [ファイル名], [1]);">あああ</a>
     <!-- トップの画面 -->
     <div class="welcome" id="unagiWelcome">
       <div class="jumpMenu">

@@ -1,11 +1,14 @@
 const downloadUnagi = () => {
-  location.href = "./pacman/UNAGI.zip";
+  gtag("event", "download", {"event_label": "UNAGI.zip"});
+  location.href = "./unagi/UNAGI.zip";
 };
 
 const downloadBotch = () => {
+  gtag("event", "download", {"event_label": "BOTCH-MAN.zip"});
   location.href = "./pacman/BOTCH-MAN.zip";
 };
 
 const downloadBBB = () => {
-  location.href = "./pacman/BREAK BRIGHT BLOCK.zip";
+  gtag("event", "download", {"event_label": "BBB.zip"});
+  location.href = "./tetris/BREAK BRIGHT BLOCK.zip";
 };
