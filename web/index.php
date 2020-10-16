@@ -287,7 +287,6 @@ for ($i = 0; $i < 3; $i++) {
     <script src="./library/swiper-6.3.3/swiper-bundle.min.js"></script>
     <script src="./js/changeGifs.js"></script>
     <script src="./js/ranking.js"></script>
-    <script src="./js/help.js"></script>
     <script src="./js/jump.js"></script>
     <script src="./js/download.js"></script>
   </body>
