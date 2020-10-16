@@ -29,10 +29,6 @@ $ranking_pacman = $stmt_pacman->fetchAll();
 
 $stmt_tetris = $dbh_tetris->query("SELECT * FROM ranking ORDER BY score DESC");
 $ranking_tetris = $stmt_tetris->fetchAll();
-
-var_dump($ranking_unagi);
-var_dump($ranking_pacman);
-var_dump($ranking_tetris);
 ?>
 
 <!DOCTYPE html>
@@ -81,67 +77,63 @@ var_dump($ranking_tetris);
 
     <div class="swiper-container bgcolor">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" id="bg-0">
-          <div class="movieBox">
-            <img
-              class="welcome-video"
-              src="./images/botchman.gif"
-              alt="ボッチマンムービー"
-            />
-            <div class="gameTitle">BOTCH-MAN</div>
-          </div>
-        </div>
-        <div class="swiper-slide" id="bg-1">
-          <div class="movieBox">
-            <img
+
+        <!-- 一つ目 -->
+        <div class="swiper-slide">
+          <div id="bg-1">
+            <div class="movieBox">
+              <img
               class="welcome-video"
               src="./images/unagi.gif"
-              alt="ウナギムービー"
-            />
-            <div class="gameTitle">UNAGI</div>
+              alt="ボッチマンムービー"
+              />
+              <div class="gameTitle">UNAGI</div>
+            </div>
+          </div>
+          <div class="gameGiza">
+            <img  src="./images/red-block.svg" alt="うなギザギザ" style="background-color: white; z-index: 5;">
           </div>
         </div>
-        <div class="swiper-slide" id="bg-2">
-          <div class="movieBox">
-            <img
+        
+        <!-- 二つ目 -->
+        <div class="swiper-slide">
+          <div id="bg-0">
+            <div class="movieBox">
+              <img
+              class="welcome-video"
+              src="./images/botchman.gif"
+              alt="ウナギムービー"
+              />
+              <div class="gameTitle">BOTCH-MAN</div>
+            </div>
+          </div>
+          <div class="gameGiza">
+            <img  src="./images/slide-block.svg" alt="うなギザギザ" style="background-color: white; z-index: 5;">
+          </div>
+        </div>
+
+        <!-- 三つ目 -->
+        <div class="swiper-slide">
+          <div id="bg-2">
+            <div class="movieBox">
+              <img
               class="welcome-video"
               src="./images/bbb.gif"
               alt="ブレイクブライトブロックムービー"
-            />
-            <div class="gameTitle">BREAK BRIGHT BLOCK</div>
+              />
+              <div class="gameTitle">BREAK BRIGHT BLOCK</div>
+            </div>
+          </div>
+          <div class="gameGiza">
+            <img  src="./images/blue-block.svg" alt="うなギザギザ" style="background-color: white; z-index: 5;">
           </div>
         </div>
-        <!-- <div class="swiper-slide" id="bg-1">botch</div> -->
-      </div>
-    </div>
-    <div class="swiper-container gizasvg" id="gizagiza">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img
-            src="./images/slide-block.svg"
-            alt="ギザギザ"
-            class="donotDownload"
-          />
-        </div>
-        <div class="swiper-slide">
-          <img
-            src="./images/red-block.svg"
-            alt="ギザギザ"
-            class="donotDownload"
-          />
-        </div>
-        <div class="swiper-slide">
-          <img
-            src="./images/blue-block.svg"
-            alt="ギザギザ"
-            class="donotDownload"
-          />
-        </div>
+
       </div>
     </div>
     <!-- ランキングの画面 -->
     <div id="ranking">
-      <div class="smallTitle">ランキングを見る</div>
+      <div name="ranking" class="smallTitle">ランキングを見る</div>
       <!-- ランキングの切り替え -->
       <div class="switch_menu">
         <div class="selected-unagi" id="unagi" onclick="showUnagi()">UNAGI</div>
@@ -182,8 +174,8 @@ var_dump($ranking_tetris);
 
     <!-- ダウンロードの画面 -->
     <div id="download">
-      <div class="smallTitle">ゲームをダウンロードする</div>
-      <div class="help" onclick="openHelp()">
+      <div name="download" class="smallTitle">ゲームをダウンロードする</div>
+      <label for="trigger" class="help" >
         <img
           class="helpMark"
           src="./images/question.svg"
@@ -191,6 +183,54 @@ var_dump($ranking_tetris);
         />
         <div class="helpName">ダウンロードの仕方を知る</div>
       </div>
+      <!-- ヘルプのポップアップ -->
+      <div class="popup_wrap">
+        <input id="trigger" type="checkbox" />
+        <div class="popup_overlay">
+          <label for="trigger" class="popup_trigger"></label>
+          <div class="popup_content">
+            <div id="popupTop">
+              <div class="popupTitle">ゲームをダウンロードする</div>
+              <label for="trigger" class="close_btn">
+                <img src="./images/close-btn.svg" alt="閉じるボタン">
+              </label>
+            </div>
+            <div id="popupBottom">
+              <div class="setpBox">
+                <div class="stepNum">STEP1</div>
+                <img class="stepImg" src="./images/dl_1.png" alt="ステップ1">
+                <div class="stepTitle">ダウンロードする</div>
+                <div class="stepExp">
+                  ホームページからお好きなゲームを選んで、ダウンロードボタンをクリックします。
+                </div>
+              </div>
+              <div>
+                <img class="arrowImg" src="./images/arrow.svg" alt="右">
+              </div>
+              <div class="setpBox">
+                <div class="stepNum">STEP2</div>
+                <img class="stepImg" src="./images/dl_2.png" alt="ステップ1">
+                <div class="stepTitle">解凍する</div>
+                <div class="stepExp">
+                  ダウンロードしたファイルを右クリックから解凍し、フォルダを開きます。
+                </div>
+              </div>
+              <div>
+                <img class="arrowImg" src="./images/arrow.svg" alt="右">
+              </div>
+              <div class="setpBox">
+                <div class="stepNum">STEP3</div>
+                <img class="stepImg" src="./images/dl_3.png" alt="ステップ1">
+                <div class="stepTitle">.exeファイルをクリック</div>
+                <div class="stepExp">
+                  〇〇.exeファイルをクリックするとゲームで遊べます。必ず「README.txt」を読んでから遊んでください。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ここまで -->
       <div id="gameDownload">
         <div class="download-game">
           <div class="download-gameTitle" id="download-unagiTitle">UNAGI</div>
@@ -231,7 +271,7 @@ var_dump($ranking_tetris);
     <!-- プレビュー -->
 
     <div id="preview">
-      <div class="smallTitle">プレビュー</div>
+      <div name="preview" class="smallTitle">プレビュー</div>
       <div class="previewBox">
         <img
           src="./images/unagi.gif"
