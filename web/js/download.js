@@ -1,5 +1,11 @@
-const downloadUnagi = () => {};
+const downloadUnagi = () => {
+  location.href = "./pacman/UNAGI.zip";
+};
 
-const downloadBotch = () => {};
+const downloadBotch = () => {
+  location.href = "./pacman/BOTCH-MAN.zip";
+};
 
-const downloadBBB = () => {};
+const downloadBBB = () => {
+  location.href = "./pacman/BREAK BRIGHT BLOCK.zip";
+};

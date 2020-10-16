@@ -1,34 +1,24 @@
 <?php
 ini_set("display_errors", 1);
 
-// データベースに接続
-$dbh_unagi = new PDO(
-    "mysql:host=mysql2014.db.sakura.ne.jp; dbname=nitnc5j_unagi; charset=utf8",
-    "nitnc5j",
-    "5jclassarai"
-);
+$game_name = ["unagi", "pacman", "tetris"];
 
-$dbh_pacman = new PDO(
-    "mysql:host=mysql2014.db.sakura.ne.jp; dbname=nitnc5j_pacman; charset=utf8",
-    "nitnc5j",
-    "5jclassarai"
-);
+$dbh = [];
+$stmt = [];
+$ranking = [];
 
-$dbh_tetris = new PDO(
-    "mysql:host=mysql2014.db.sakura.ne.jp; dbname=nitnc5j_tetris; charset=utf8",
-    "nitnc5j",
-    "5jclassarai"
-);
+for ($i = 0; $i < 3; $i++) {
+  // データベースに接続
+  $dbh[] = new PDO(
+      "mysql:host=mysql2014.db.sakura.ne.jp; dbname=nitnc5j_" . $game_name[$i] . "; charset=utf8",
+      "nitnc5j",
+      "5jclassarai"
+  );
 
-// ランキングを取得
-$stmt_unagi = $dbh_unagi->query("SELECT * FROM ranking");
-$ranking_unagi = $stmt_unagi->fetchAll();
-
-$stmt_pacman = $dbh_pacman->query("SELECT * FROM ranking");
-$ranking_pacman = $stmt_pacman->fetchAll();
-
-$stmt_tetris = $dbh_tetris->query("SELECT * FROM ranking ORDER BY score DESC");
-$ranking_tetris = $stmt_tetris->fetchAll();
+  // ランキングを取得
+  $stmt[] = $dbh[$i]->query("SELECT * FROM ranking ORDER BY score DESC");
+  $ranking[] = $stmt[$i]->fetchAll();
+}
 ?>
 
 <!DOCTYPE html>
@@ -146,30 +136,31 @@ $ranking_tetris = $stmt_tetris->fetchAll();
       </div>
 
       <!-- ランキングの表示 -->
-      <div class="rankingBox">
-        <!-- 実際の中身スコア一つ分 -->
-        <?php $rank = 1; ?>
-        <?php foreach ($ranking_pacman as $row) { ?>
-          <?php if ($row["datetime"] == "0000-00-00 00:00:00") continue; ?>
-          <?php if ($rank == 1) { ?>
-            <div class="topScore">
-              <div class="topNum"><?= $rank ?></div>
-              <img class="topCrown" src="./images/crown.svg" alt="王冠" />
-              <div class="topName"><?= $row["name"] ?></div>
-              <div class="topPoint"><?= $row["score"] ?></div>
-              <div class="topDate"><?= str_replace("-", "/", substr($row["datetime"], 0, 10)) ?></div>
-            </div>
-          <?php } else { ?>
-            <div class="score">
-              <div class="num"><?= $rank ?></div>
-              <div class="name"><?= $row["name"] ?></div>
-              <div class="point"><?= $row["score"] ?></div>
-              <div class="date"><?= str_replace("-", "/", substr($row["datetime"], 0, 10)) ?></div>
-            </div>
+      <?php for ($i = 0; $i < 3; $i++) { ?>
+        <div id="ranking<?= $i + 1 ?>" class="rankingBox" style="display: <?= $i == 0 ? "block" : "none" ?>">
+          <?php $rank = 1; ?>
+          <?php foreach ($ranking[$i] as $row) { ?>
+            <?php if ($row["datetime"] == "0000-00-00 00:00:00") continue; ?>
+            <?php if ($rank == 1) { ?>
+              <div class="topScore">
+                <div class="topNum"><?= $rank ?></div>
+                <img class="topCrown" src="./images/crown.svg" alt="王冠" />
+                <div class="topName"><?= $row["name"] ?></div>
+                <div class="topPoint"><?= $row["score"] ?></div>
+                <div class="topDate"><?= str_replace("-", "/", substr($row["datetime"], 0, 10)) ?></div>
+              </div>
+            <?php } else { ?>
+              <div class="score">
+                <div class="num"><?= $rank ?></div>
+                <div class="name"><?= $row["name"] ?></div>
+                <div class="point"><?= $row["score"] ?></div>
+                <div class="date"><?= str_replace("-", "/", substr($row["datetime"], 0, 10)) ?></div>
+              </div>
+            <?php } ?>
+            <?php $rank++; ?>
           <?php } ?>
-          <?php $rank++; ?>
-        <?php } ?>
-      </div>
+        </div>
+      <?php } ?>
     </div>
 
     <!-- ダウンロードの画面 -->
@@ -237,7 +228,7 @@ $ranking_tetris = $stmt_tetris->fetchAll();
           <div class="download-gameExplain">
             壁や障害物をよけつつ、餌を食べさせてうなぎを成長させましょう。成長するほどウナギが伸び難易度が上がります。
           </div>
-          <button class="download-button" onclick="donwloadUnagi()">
+          <button class="download-button" onclick="downloadUnagi()">
             ダウンロード
           </button>
         </div>
@@ -248,7 +239,7 @@ $ranking_tetris = $stmt_tetris->fetchAll();
           <div class="download-gameExplain">
             高専の教員に捕まらず、ステージ上に散らばる単位を全てゲットしましょう。アイテムを取るといいことがあるかも...?
           </div>
-          <button class="download-button" onclick="donwloadBotch()">
+          <button class="download-button" onclick="downloadBotch()">
             ダウンロード
           </button>
         </div>
@@ -259,7 +250,7 @@ $ranking_tetris = $stmt_tetris->fetchAll();
           <div class="download-gameExplain">
             制限時間内にどれだけ多く華麗にブロックを消せるかを競うパズルゲームです。特殊な消し方で得点アップ!
           </div>
-          <button class="download-button" onclick="donwloadBBB()">
+          <button class="download-button" onclick="downloadBBB()">
             ダウンロード
           </button>
         </div>
