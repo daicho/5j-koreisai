@@ -3,6 +3,10 @@
 Windowsの人は「Windows」フォルダの「UNAGI.exe」を、
 Macの人は「MacOS」フォルダの「UNAGI.app」を実行してください。
 
+ゲームの実行にはJavaが必要です。
+起動できない場合には、下記URLよりインストールしてください。
+https://java.com/ja/download/
+
 === あそびかた ===
 動き続けるウナギを操作して、成長させてください。
 赤いエビを食べると長くなります。
