@@ -7,7 +7,8 @@ body {
   min-width: 1280px;
 }
 
-Europaの場合 p {
+/* Europaの場合 */
+.num {
   font-family: europa, sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -432,6 +433,10 @@ h1 {
 }
 
 .topScore {
+  font-family: europa, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
   color: white;
 
   display: flex;
@@ -443,6 +448,9 @@ h1 {
 }
 
 .topNum {
+  font-family: europa, sans-serif;
+  font-weight: 700;
+  font-style: normal;
   color: black;
   font-size: 36px;
   font-weight: 700;
@@ -463,6 +471,9 @@ h1 {
 
 .topPoint {
   /* background-color: cornflowerblue; */
+  font-family: europa, sans-serif;
+  font-weight: 700;
+  font-style: normal;
   color: black;
   font-size: 36px;
   font-weight: 700;
@@ -475,6 +486,9 @@ h1 {
 
 .topDate {
   /* background-color: darkgoldenrod; */
+  font-family: europa, sans-serif;
+  font-weight: 700;
+  font-style: normal;
   color: #a8a8a8;
   font-size: 16;
   font-weight: 700px;
@@ -484,6 +498,9 @@ h1 {
 }
 
 .score {
+  font-family: europa, sans-serif;
+  font-weight: 700;
+  font-style: normal;
   color: white;
 
   display: flex;
@@ -495,6 +512,9 @@ h1 {
 }
 
 .num {
+  font-family: europa, sans-serif;
+  font-weight: 700;
+  font-style: normal;
   color: black;
   font-size: 24px;
   font-weight: 700;
@@ -515,6 +535,9 @@ h1 {
 
 .point {
   /* background-color: cornflowerblue; */
+  font-family: europa, sans-serif;
+  font-weight: 700;
+  font-style: normal;
   color: black;
   font-size: 24px;
   font-weight: 700;
@@ -527,6 +550,9 @@ h1 {
 
 .date {
   /* background-color: darkgoldenrod; */
+  font-family: europa, sans-serif;
+  font-weight: 700;
+  font-style: normal;
   color: #a8a8a8;
   font-size: 16;
   font-weight: 700px;
