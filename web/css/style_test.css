@@ -1,0 +1,848 @@
+/* fontの設定 */
+/* noto sansの場合 */
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  /* 使うweightは700か400のみ */
+  font-weight: 700;
+  min-width: 1280px;
+}
+
+/* Europaの場合 */
+.num {
+  font-family: europa, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  box-sizing: border-box;
+}
+/* タイトル */
+.welcome {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.bgcolor {
+  height: calc(100% + 245px);
+  min-height: 1045px;
+}
+
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+#bg-0 {
+  width: 100%;
+  height: calc(100% - 245px);
+  background-color: #c1c10f;
+}
+
+#bg-1 {
+  width: 100%;
+  height: calc(100% - 245px);
+  background-color: #c42431;
+}
+
+#bg-2 {
+  width: 100%;
+  height: calc(100% - 245px);
+  background-color: #1466c6;
+}
+
+.jumpMenu {
+  /* width: 100%; */
+  display: flex;
+  justify-content: flex-end;
+  height: 94px;
+  padding-right: 8.2%;
+}
+
+.welcome-jump {
+  color: white;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+
+  width: auto;
+  height: 26px;
+  margin-top: 30px;
+  margin-left: 42px;
+}
+
+.welcomeBox {
+  margin-top: 0px;
+  padding-left: 8.2%;
+  padding-bottom: 120px;
+}
+
+.welcomeBox-left {
+  margin-top: 0px;
+}
+
+.welcome-title {
+  font-size: 80px;
+  width: 564px;
+  height: 364px;
+}
+
+.welcome-explain {
+  color: white;
+  padding-top: 58px;
+  padding-bottom: 192px;
+  width: 563px;
+  line-height: 2em;
+  font-size: 16px;
+}
+
+/* .movieBox-left {
+  width: 50%;
+  color: rgba(255, 0, 0, 255);
+} */
+.movieBox {
+  padding-top: 94px;
+  padding-right: 8.2%;
+  text-align: right;
+}
+
+.welcome-video {
+  width: 351px;
+  border-radius: 22px;
+  box-shadow: 5px 5px 15px rgba(10, 10, 30, 0.4);
+}
+
+.gameTitle {
+  color: white;
+  padding-top: 8px;
+}
+
+#gizagiza {
+  text-align: right;
+  height: 245px;
+}
+
+.gameGiza {
+  height: 245px;
+  widows: 100%;
+  text-align: right;
+
+  background-color: white;
+}
+.gizasvg {
+  height: 245px;
+  width: 100%;
+  overflow: hidden;
+
+  /* background-color: salmon; */
+}
+
+/* 共通 */
+
+.smallTitle {
+  font-size: 25px;
+}
+
+/* ランキング */
+
+#ranking {
+  /* background-color: salmon; */
+  height: 100%;
+  min-height: 800px;
+  width: 83.6%;
+  padding-left: 8.2%;
+  padding-right: 8.2%;
+  margin-bottom: 132px;
+}
+/* 
+.switch-menu {
+  display: flex;
+  align-items: center;
+
+  height: 52px;
+  background-color: red;
+}
+
+.rankingswitch {
+  font-size: 22px;
+  font-weight: 700;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+}
+
+#unagi {
+  background-color: #c1c10f;
+  width: 170px;
+}
+#botch-man {
+  background-color: #c42431;
+}
+#bbb {
+  background-color: #1466c6;
+} */
+
+/* ダウンロード */
+#download {
+  background-color: white;
+  width: 83.6%;
+  padding-left: 8.2%;
+  padding-right: 8.2%;
+}
+
+.help {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+
+  display: flex;
+
+  margin-bottom: 70px;
+}
+.helpMark {
+  padding-top: 2px;
+  margin-right: 5px;
+}
+.helpName {
+  color: #aaaaaa;
+}
+#helpPopup {
+  width: 40%;
+  background-color: #e8e5db;
+  display: none;
+  position: fixed;
+}
+
+#gameDownload {
+  display: flex;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+.download-game {
+  text-align: center;
+  margin: auto;
+  padding: auto;
+}
+
+#download-unagiTitle {
+  color: #c42431;
+}
+
+#download-botchmanTitle {
+  color: #c1c10f;
+}
+
+#download-breakbrightblockTitle {
+  color: #1466c6;
+}
+
+.download-gameTitle {
+  font-size: 22px;
+  margin-bottom: 13px;
+}
+
+.download-gameExplain {
+  width: 230px;
+  text-align: left;
+  margin: auto;
+  font-weight: 400;
+  margin-bottom: 19px;
+}
+
+.download-button {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 22px;
+  width: 159px;
+  height: 43px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* プレビュー */
+
+#previewsvg {
+  height: 245px;
+}
+
+#preview {
+  width: 83.6%;
+  padding-left: 8.2%;
+  padding-right: 8.2%;
+  background-color: #e8e5db;
+}
+
+.previewBox {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  margin-top: 52px;
+  margin-bottom: 223px;
+}
+
+.preview-game {
+  width: 243px;
+  border-radius: 22px;
+  box-shadow: 5px 5px 15px rgba(10, 10, 30, 0.4);
+}
+
+.copyright {
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  padding-bottom: 42px;
+  background-color: #e8e5db;
+  color: #7b7b7b;
+}
+
+/* 角田さん */
+/*-------------------切り替えボタンの装飾---------------*/
+/*h1,
+p {
+  font-family: "Noto Sans JP", sans-serif;
+  /* 使うweightは700か400のみ */ /*
+  font-weight: 700;
+}*/ /*
+h1 {
+  font-size: 30px;
+}*/
+
+.switch_menu {
+  display: flex;
+
+  width: 1070px;
+  height: 52px;
+  margin: 0 auto;
+  margin-top: 65px;
+  margin-bottom: 20px;
+}
+
+.switch-unselected {
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 700;
+  color: black;
+  background-color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 26px;
+  height: 100%;
+}
+
+.selected-unagi {
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  background-color: #c42431;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 26px;
+  height: 100%;
+}
+.selected-botch {
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  background-color: #c1c10f;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 26px;
+  height: 100%;
+}
+.selected-bbb {
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  background-color: #1466c6;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 26px;
+  height: 100%;
+}
+
+.rankingBox {
+  background-color: #f4f4f4;
+
+  margin: 0 auto;
+  border-radius: 30px;
+  width: 1070px;
+  height: 603px;
+  box-shadow: 10px 10px 10px rgba(10, 10, 50, 0.4);
+
+  overflow-y: scroll;
+  /* スクロールバー削除 ie+edge, firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* スクロールバー削除 safari+chrome */
+.rankingBox::-webkit-scrollbar {
+  display: none;
+}
+
+.topScore {
+  font-family: europa, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
+  color: white;
+
+  display: flex;
+
+  width: 957px;
+  height: 99px;
+  margin: 0 auto;
+  border-bottom: solid 1px;
+}
+
+.topNum {
+  font-family: europa, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: Europa-Bold;
+
+  margin: 25px 63px 0px 0px;
+}
+
+.topName {
+  /* background-color: coral; */
+  color: black;
+  font-size: 34px;
+  font-weight: 700;
+
+  margin: 26px 0px 0px 15px;
+  width: 500px;
+}
+
+.topPoint {
+  /* background-color: cornflowerblue; */
+  font-family: europa, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: Europa-Bold;
+  text-align: right;
+
+  margin: 25px 0px 0px 0px;
+  width: 186px;
+}
+
+.topDate {
+  /* background-color: darkgoldenrod; */
+  font-family: europa, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #a8a8a8;
+  font-size: 16;
+  font-weight: 700px;
+  font-family: Europa-Bold;
+
+  margin: 42px 0px 0px 82px;
+}
+
+.score {
+  font-family: europa, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+
+  display: flex;
+
+  width: 957px;
+  height: 99px;
+  margin: 0 auto;
+  border-bottom: solid 1px;
+}
+
+.num {
+  font-family: europa, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: Europa-Bold;
+
+  margin: 37px 75px 0px 4px;
+}
+
+.name {
+  /* background-color: coral; */
+  color: black;
+  font-size: 22px;
+  font-weight: 700;
+
+  margin: 37px 0px 0px 0px;
+  width: 580px;
+}
+
+.point {
+  /* background-color: cornflowerblue; */
+  font-family: europa, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: Europa-Bold;
+  text-align: right;
+
+  margin: 37px 0px 0px 0px;
+  width: 106px;
+}
+
+.date {
+  /* background-color: darkgoldenrod; */
+  font-family: europa, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #a8a8a8;
+  font-size: 16;
+  font-weight: 700px;
+  font-family: Europa-Bold;
+
+  margin: 42px 0px 0px 82px;
+}
+
+/*-------------------ランキングの装飾---------------*/
+/* .check_flag {
+  display: none;
+}
+
+.rank_type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 61px;
+  max-width: 500px;
+  border-bottom: solid 1px;
+  color: white;
+
+  margin: 0 auto;
+
+  cursor: pointer;
+}
+
+.rank_type p {
+  font-size: 16px;
+  color: #111926;
+
+  padding-left: 23px;
+  margin: 0;
+}
+
+.rank_type img {
+  width: auto;
+  height: 13.5px;
+  padding-right: 16px;
+}
+
+.ranking {
+  display: none;
+}
+
+.check_flag:checked + .rank_type img {
+  display: block;
+  transform: rotateX(180deg);
+}
+
+.check_flag:checked + .rank_type + .ranking {
+  display: block;
+} */
+
+/*-------------------参加者の装飾---------------*/
+/* #member_block {
+  display: none;
+}
+
+.name_block .number {
+  padding-left: 16px;
+  padding-right: 10px;
+  width: 45px;
+  height: auto;
+}
+.emoji {*/
+/* display: block; */
+/* font-family: "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji",
+    sans-serif;
+  font-size: 23px;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 23px;
+  margin-right: 11px;
+
+  padding-top: 3px;
+} */
+
+/*-------------------個人名の装飾---------------*/
+/* .name_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 61px;
+  max-width: 500px;
+  border-bottom: solid 1px;
+  color: white;
+
+  margin: 0 auto;
+}
+
+.indent {
+  width: 10px;
+  height: 100%;
+  background-color: #111926;
+}
+
+.name_block p {
+  color: #111926;
+}
+
+.rank_num {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 23px;
+  margin-right: 11px;
+
+  width: 18px;
+  height: 27px;
+  border: solid 2px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.name {
+  flex-grow: 3;
+  font-size: 18px;
+}
+
+.score {
+  font-size: 14px;
+  padding-right: 41px;
+  float: right;
+
+  font-size: 16px;
+}
+
+.arrow {
+  width: auto;
+  height: 14.5px;
+
+  padding-right: 23px;
+  float: right;
+} */
+
+/*-------------------閉じるボタンの装飾---------------*/
+/* .close {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  background-color: #111926;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+
+  margin: 0 auto;
+
+  cursor: pointer;
+}
+
+.close p {
+  font-size: 14px;
+  color: #e3d3c6;
+  padding-left: 10px;
+}
+
+.close_btn {
+  width: 15px;
+  height: auto;
+} */
+
+/*ポップアップここから*/
+.popup_wrap input {
+  display: none;
+}
+
+.popup_overlay {
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.5s, transform 0s 0.5s;
+  transform: scale(0);
+}
+
+.popup_trigger {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.popup_content {
+  position: relative;
+  align-self: center;
+  width: 90%;
+  max-width: 1070px;
+  padding: 35px 45px 45px 45px;
+  box-sizing: border-box;
+  background: #f4f4f4;
+  line-height: 1.4em;
+  transition: 0.5s;
+  border-radius: 30px;
+}
+
+.close_btn {
+  position: absolute;
+  top: 31px;
+  right: 45px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.popup_wrap input:checked ~ .popup_overlay {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.5s;
+}
+
+.open_btn {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 30px;
+  margin: 10px auto;
+  padding: 8px 16px;
+  color: #fff;
+  background: #0c0d62;
+  font-weight: bold;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.popupTitle {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+#popupBottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stepBox {
+  width: 280px;
+}
+
+.stepNum {
+  color: #696969;
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 45px;
+}
+
+.stepImg {
+  width: 280px;
+  height: 225px;
+  border-radius: 30px;
+  margin-top: 14px;
+}
+
+.stepTitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 auto;
+  text-align: center;
+
+  width: 100%;
+  height: 32px;
+  margin-top: 20px;
+}
+
+.stepExp {
+  width: 280px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+.arrowImg {
+  padding-top: 180px;
+}
+/*ポップアップココまで*/
